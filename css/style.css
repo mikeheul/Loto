@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.logo {
+    width: 300px;
+    animation: 2s bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-5px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+.choices {
+    width: 60%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.choices .choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    /* background: gray; */
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.753) 0px 25px 20px -20px;
+    backdrop-filter: blur(5px);
+
+    /* glass */
+    /* border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.choices .choice:hover {
+    background: rgb(40, 82, 98);
+    transform: scale(1.2);
+}
+
+.choices .choice.disabled {
+    background: rgb(29, 92, 117);
+}
+
+.tirage {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tirage h2 {
+    margin-bottom: 20px;
+}
+
+.tirage .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tirageComputer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    border: 3px solid rgb(219, 86, 86);
+    color: rgb(219, 86, 86);
+    font-size: 30px;
+    background: rgba(219, 86, 86, 0.233);
+    box-shadow: rgba(219, 86, 86, 0.753) 0px 25px 20px -20px;
+    transition: .5s;
+    cursor: pointer;
+    /* opacity: 0;  */
+}
+
+/* .tirage .details .tirageComputer:nth-child(1) {
+    opacity: 1;
+    transition-delay: .5s;
+}
+.tirage .details .tirageComputer:nth-child(2) {
+    opacity: 1;
+    transition-delay: 1s;
+}
+.tirage .details .tirageComputer:nth-child(3) {
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+.tirage .details .tirageComputer:nth-child(4) {
+    opacity: 1;
+    transition-delay: 2s;
+}
+.tirage .details .tirageComputer:nth-child(5) {
+    opacity: 1;
+    transition-delay: 2.5s;
+} */
+
+.tirageComputer:hover {
+    transform: translateY(-10px);
+}
+
+.tirageComputerOK {
+    border: 3px solid rgb(157, 219, 86);
+    color: rgb(157, 219, 86);
+    background: rgba(157, 219, 86, 0.233);
+    box-shadow: rgba(157, 219, 86, 0.753) 0px 25px 20px -20px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.result .button {
+    margin-top: 20px;
+    border: none;
+    padding: 15px 40px 15px 40px;
+    background: rgb(20, 89, 110);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.527) 0px 25px 20px -20px;
+}
+
+.result .button i {
+    margin-right: 5px;
+}
+
+.result .button:hover {
+    background: rgb(28, 129, 160);
+}
+
+.emoji {
+    font-size: 30px;
+}
+
+@media(max-width: 350px) {
+    .logo {
+        width: 90%;
+    }
+}
